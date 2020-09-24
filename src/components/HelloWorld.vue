@@ -1,6 +1,7 @@
 <template>
     <div class="hello">
         <h1>{{ message }}</h1>
+        <h2 @click="handleClick">{{ name }}</h2>
         <p>
             For a guide and recipes on how to configure / customize this project,<br>
             check out the
@@ -37,6 +38,7 @@
     import {VueComponent} from "@/annotate/VueComponent";
     import {Prop} from "@/annotate/Prop";
     import {Computed} from "@/annotate/Computed";
+    import {NativeApi} from "@/annotate/NativeApi";
 
     export default @VueComponent
     class HelloWorld {
@@ -49,6 +51,20 @@
         @Computed
         message() {
             return this.msg + ' ' + this.defaultSuffix
+        }
+
+        get name() {
+            return this.msg;
+        }
+
+        handleClick(e) {
+            console.log(e);
+            alert(this.message);
+        }
+
+        @NativeApi
+        created() {
+            console.log('created');
         }
 
     }

@@ -4,6 +4,19 @@ import {NativeApi} from "@/annotate/NativeApi";
 import {Computed} from "@/annotate/Computed";
 import {Prop} from "@/annotate/Prop";
 
+const getGetterProperties = target => {
+    return [
+        ...Object.getOwnPropertyNames(target)
+            .map(property => ({name: property, descriptor: Object.getOwnPropertyDescriptor(target, property)}))
+            .filter(property => 'get' in property.descriptor),
+        ...Object.getOwnPropertyNames(Object.getPrototypeOf(target))
+            .map(property => ({
+                name: property, descriptor: Object.getOwnPropertyDescriptor(Object.getPrototypeOf(target), property)
+            }))
+            .filter(property => 'get' in property.descriptor)
+    ];
+};
+
 export class VueComponentDescribe extends BasicAnnotationDescribe {
 
     constructor() {
@@ -25,11 +38,23 @@ export class VueComponentDescribe extends BasicAnnotationDescribe {
         super.storageClassDecorator(targetType);
 
         const target = new targetType();
+        this.target = target;
+
+        const valuePropertyFilter = target => {
+            return name => {
+                const describe = Object.getOwnPropertyDescriptor(target, name);
+                return describe && ('value' in describe)
+            }
+        };
 
         const propertyMap = AnnotationUtils.fromEntries(
             [
-                ...Object.getOwnPropertyNames(target),
+                ...Object.getOwnPropertyNames(target)
+                    .filter(valuePropertyFilter(target)),
                 ...Object.getOwnPropertyNames(Object.getPrototypeOf(target))
+                    .filter(valuePropertyFilter(
+                        Object.getPrototypeOf(target)
+                    ))
             ].map(key => [key, target[key]])
         );
 
@@ -85,7 +110,17 @@ export class VueComponentDescribe extends BasicAnnotationDescribe {
     }
 
     parseComputedMap(result = {}) {
-        result.computed = {...result.computed, ...this.computedMap};
+
+        const getterMap = {};
+
+        if (this.target) {
+            const getterProperties = getGetterProperties(this.target);
+            getterProperties.forEach(property => {
+                getterMap[property.name] = property.descriptor.get;
+            })
+        }
+
+        result.computed = {...result.computed, ...this.computedMap, ...getterMap};
     }
 
     parseNativeApi(result = {}) {
