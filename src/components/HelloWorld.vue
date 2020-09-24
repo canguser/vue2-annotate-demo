@@ -36,7 +36,7 @@
 
 <script>
     import {VueComponent} from "@/annotate/VueComponent";
-    import {Prop} from "@/annotate/Prop";
+    import {Props} from "@/annotate/Props";
     import {Computed} from "@/annotate/Computed";
     import {NativeApi} from "@/annotate/NativeApi";
 
@@ -45,7 +45,7 @@
 
         defaultSuffix = 'For Annotate';
 
-        @Prop
+        @Props
         msg = String;
 
         @Computed

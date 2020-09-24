@@ -2,7 +2,7 @@ import {BasicAnnotationDescribe, AnnotationUtils, AnnotationGenerator} from "@pa
 import {Extra} from "@/annotate/Extra";
 import {NativeApi} from "@/annotate/NativeApi";
 import {Computed} from "@/annotate/Computed";
-import {Prop} from "@/annotate/Prop";
+import {Props} from "@/annotate/Props";
 
 const getGetterProperties = target => {
     return [
@@ -79,7 +79,7 @@ export class VueComponentDescribe extends BasicAnnotationDescribe {
                     if (targetProperty.hasAnnotations(Computed)) {
                         this.computedMap[key] = propertyMap[key];
                     }
-                    if (targetProperty.hasAnnotations(Prop)) {
+                    if (targetProperty.hasAnnotations(Props)) {
                         this.propMap[key] = propertyMap[key];
                     }
                 }
