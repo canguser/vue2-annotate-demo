@@ -673,7 +673,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.10.4"
 
-"@babel/plugin-transform-runtime@^7.0.0", "@babel/plugin-transform-runtime@^7.11.0":
+"@babel/plugin-transform-runtime@^7.11.0":
   version "7.11.5"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-runtime/-/plugin-transform-runtime-7.11.5.tgz#f108bc8e0cf33c37da031c097d1df470b3a293fc"
   integrity sha512-9aIoee+EhjySZ6vY5hnLjigHzunBlscx9ANKutkeWTJTx6m5Rbq6Ic01tLvO54lSusR+BxV7u4UDdCmXv5aagg==
@@ -915,10 +915,10 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@palerock/annotate-js@^1.2.25":
-  version "1.2.25"
-  resolved "https://registry.yarnpkg.com/@palerock/annotate-js/-/annotate-js-1.2.25.tgz#936e2510acc0667894d9f7f36a3581a7acea63f1"
-  integrity sha512-dJHSIUByMosm22P0wDcDepwIElPiqQnrnORhuKtCjJBCQxVn9j7B/2FP28lrWN6KKTGKucFnHWWcPgKPFf5rGA==
+"@palerock/annotate-js@^1.2.26":
+  version "1.2.26"
+  resolved "https://registry.yarnpkg.com/@palerock/annotate-js/-/annotate-js-1.2.26.tgz#37ea14df911f86e34a3ed49ce9b188f42d7e9a3b"
+  integrity sha512-cbooEh4F6DvyBY12F3oIX6VYiTYXIQPKW9HKZrbUMkS4tzT4Nc0N+F39ngz4KjtTw8q5QYFxO7PYCes3vVV1bw==
 
 "@soda/friendly-errors-webpack-plugin@^1.7.1":
   version "1.7.1"

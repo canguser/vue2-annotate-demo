@@ -35,31 +35,28 @@
 
 <script>
     import {Classic} from "@/annotate/Classic";
+    import {Prop} from "@/annotate/Prop";
+    import {Computed} from "@/annotate/Computed";
 
     @Classic
-    class A {
-        name = 'HelloWorld';
+    class HelloWorld {
 
-        props = {
-            msg: String
-        };
+        defaultSuffix = 'For Annotate';
 
-        data() {
-            return {
-                defaultSuffix: 'For Annotate'
-            }
+        @Prop
+        msg = String;
+
+        @Computed
+        message() {
+            return this.msg + ' ' + this.defaultSuffix
         }
 
-        computed = {
-            message() {
-                return this.msg + ' ' + this.defaultSuffix
-            }
-        }
     }
 
-    console.log(A);
+    console.log(HelloWorld);
 
-    export default A;
+    export default HelloWorld;
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
