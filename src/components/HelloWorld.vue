@@ -34,11 +34,11 @@
 </template>
 
 <script>
-    import {Classic} from "@/annotate/Classic";
+    import {VueComponent} from "@/annotate/VueComponent";
     import {Prop} from "@/annotate/Prop";
     import {Computed} from "@/annotate/Computed";
 
-    @Classic
+    export default @VueComponent
     class HelloWorld {
 
         defaultSuffix = 'For Annotate';
@@ -52,11 +52,6 @@
         }
 
     }
-
-    console.log(HelloWorld);
-
-    export default HelloWorld;
-
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

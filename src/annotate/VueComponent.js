@@ -4,7 +4,7 @@ import {NativeApi} from "@/annotate/NativeApi";
 import {Computed} from "@/annotate/Computed";
 import {Prop} from "@/annotate/Prop";
 
-export class ClassicDescribe extends BasicAnnotationDescribe {
+export class VueComponentDescribe extends BasicAnnotationDescribe {
 
     constructor() {
         super();
@@ -119,4 +119,4 @@ export class ClassicDescribe extends BasicAnnotationDescribe {
 
 }
 
-export const Classic = AnnotationGenerator.generate(ClassicDescribe);
+export const VueComponent = AnnotationGenerator.generate(VueComponentDescribe);
