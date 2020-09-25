@@ -920,6 +920,13 @@
   resolved "https://registry.yarnpkg.com/@palerock/annotate-js/-/annotate-js-1.2.26.tgz#37ea14df911f86e34a3ed49ce9b188f42d7e9a3b"
   integrity sha512-cbooEh4F6DvyBY12F3oIX6VYiTYXIQPKW9HKZrbUMkS4tzT4Nc0N+F39ngz4KjtTw8q5QYFxO7PYCes3vVV1bw==
 
+"@palerock/vue2-annotate@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@palerock/vue2-annotate/-/vue2-annotate-1.0.0.tgz#ad12e153ac8bf4fb57fd7ed7729d5f99afb6ba06"
+  integrity sha512-um6lnZrL1gUYwRvcYpCTKzxfMP74Fk/6nq23xMUzT6Jh/o1GOKUcewyaUVCLEfeRkmSJhjkYSvZRe/NKw19fgA==
+  dependencies:
+    "@palerock/annotate-js" "^1.2.26"
+
 "@soda/friendly-errors-webpack-plugin@^1.7.1":
   version "1.7.1"
   resolved "https://registry.yarnpkg.com/@soda/friendly-errors-webpack-plugin/-/friendly-errors-webpack-plugin-1.7.1.tgz#706f64bcb4a8b9642b48ae3ace444c70334d615d"

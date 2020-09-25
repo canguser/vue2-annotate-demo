@@ -8,6 +8,12 @@ module.exports = {
             {
                 "legacy": true
             }
+        ],
+        [
+            "@babel/plugin-proposal-class-properties",
+            {
+                "loose": true
+            }
         ]
     ]
 };
