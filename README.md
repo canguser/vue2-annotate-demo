@@ -1,5 +1,7 @@
 # vue-annotate
 
+## Demo For [Vue2 Annotate](https://github.com/canguser/vue2-annotate)
+
 ## Project setup
 ```
 yarn install
