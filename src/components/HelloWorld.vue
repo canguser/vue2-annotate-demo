@@ -1,21 +1,22 @@
 <template>
     <div class="hello">
         <h1>{{ appendMessage }}</h1>
-        <h2 @click="handleClick">{{ message }}</h2>
+        <h2 @click="handleClick">{{ subTitle }}</h2>
     </div>
 </template>
 
 <script>
     // 引入注解
-    import {VueComponent, Props, Computed, NativeApi} from "@palerock/vue2-annotate";
+    import {VueComponent, Props, Computed, NativeApi, Watch} from "@palerock/vue2-annotate";
 
-    export default
-    // 使用 @VueComponent 使用一个名为 HelloWorld 的组件
+    export default // 使用 @VueComponent 使用一个名为 HelloWorld 的组件
     @VueComponent
     class HelloWorld {
 
         // 申明属性 suffix
         suffix = 'For Vue2 Annotate';
+
+        subTitle = 'My Vue2 Annotate';
 
         // 声明参数 msg
         @Props
@@ -32,10 +33,25 @@
             return this.msg;
         }
 
+        @Watch
+        $$subTitle(newValue, oldValue) {
+            console.log('sub title changed');
+            console.log(oldValue, '=>', newValue);
+        }
+
+        set subTitleAppend(value) {
+            this.subTitle += ' ' + value;
+        }
+
+        // 有 setter 必须有 getter
+        get subTitleAppend() {
+            return this.subTitle;
+        }
+
         // 声明方法
         handleClick(e) {
-            console.log(e);
-            alert(this.appendMessage);
+            console.log(e, this.message);
+            this.subTitleAppend = 'Clicked';
         }
 
         // 使用 @NativeApi 声明钩子函数

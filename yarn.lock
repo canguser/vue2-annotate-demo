@@ -920,10 +920,10 @@
   resolved "https://registry.yarnpkg.com/@palerock/annotate-js/-/annotate-js-1.2.26.tgz#37ea14df911f86e34a3ed49ce9b188f42d7e9a3b"
   integrity sha512-cbooEh4F6DvyBY12F3oIX6VYiTYXIQPKW9HKZrbUMkS4tzT4Nc0N+F39ngz4KjtTw8q5QYFxO7PYCes3vVV1bw==
 
-"@palerock/vue2-annotate@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@palerock/vue2-annotate/-/vue2-annotate-1.0.0.tgz#ad12e153ac8bf4fb57fd7ed7729d5f99afb6ba06"
-  integrity sha512-um6lnZrL1gUYwRvcYpCTKzxfMP74Fk/6nq23xMUzT6Jh/o1GOKUcewyaUVCLEfeRkmSJhjkYSvZRe/NKw19fgA==
+"@palerock/vue2-annotate@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@palerock/vue2-annotate/-/vue2-annotate-1.0.6.tgz#98cf0e8363b5b7ba2b3de202552705be69be0e33"
+  integrity sha512-pa+jUOahXYzZa260gPReZo0FDIL3+sNlw7n5C8tIA4TvNnXzZpjwMp7nfBa5REjzr/oxRjSwrk6M3vbouPO1Ng==
   dependencies:
     "@palerock/annotate-js" "^1.2.26"
 
