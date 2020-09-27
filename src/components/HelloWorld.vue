@@ -2,16 +2,26 @@
     <div class="hello">
         <h1>{{ appendMessage }}</h1>
         <h2 @click="handleClick">{{ subTitle }}</h2>
+        <h3>{{content}}</h3>
+        <p>
+            <CustomInput v-model="content"></CustomInput>
+        </p>
     </div>
 </template>
 
 <script>
     // 引入注解
     import {VueComponent, Props, Computed, NativeApi, Watch} from "@palerock/vue2-annotate";
+    import CustomInput from "@/components/CustomInput";
 
     export default // 使用 @VueComponent 使用一个名为 HelloWorld 的组件
     @VueComponent
     class HelloWorld {
+
+        @NativeApi
+        components = {CustomInput};
+
+        content = 'Hello @Model';
 
         // 申明属性 suffix
         suffix = 'For Vue2 Annotate';
@@ -61,6 +71,8 @@
         }
 
     }
+
+    console.log(HelloWorld);
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
