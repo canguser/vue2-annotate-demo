@@ -142,7 +142,7 @@ class HelloWorld {
             return parts[parts.length - 1];
         }, 
         // 将 message 中以空格分割的最后一部分改为指定内容
-        set(){
+        set(value){
             const parts = this.message.split(' ');
             parts[parts.length - 1] = value;
             this.message = parts.join(' ');
@@ -175,7 +175,7 @@ export default {
             return parts[parts.length - 1];
         }, 
         // 将 message 中以空格分割的最后一部分改为指定内容
-        set(){
+        set(value){
             const parts = this.message.split(' ');
             parts[parts.length - 1] = value;
             this.message = parts.join(' ');
