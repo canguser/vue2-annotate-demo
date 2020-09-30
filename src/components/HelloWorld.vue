@@ -6,6 +6,9 @@
         <p>
             <CustomInput v-model="content"></CustomInput>
         </p>
+        <div>
+            <CustomAnnotateTest></CustomAnnotateTest>
+        </div>
     </div>
 </template>
 
@@ -13,13 +16,14 @@
     // 引入注解
     import {VueComponent, Props, Computed, NativeApi, Watch} from "@palerock/vue2-annotate";
     import CustomInput from "@/components/CustomInput";
+    import CustomAnnotateTest from "@/components/CustomAnnotateTest";
 
     export default // 使用 @VueComponent 使用一个名为 HelloWorld 的组件
     @VueComponent
     class HelloWorld {
 
         @NativeApi
-        components = {CustomInput};
+        components = {CustomInput, CustomAnnotateTest};
 
         content = 'Hello @Model';
 

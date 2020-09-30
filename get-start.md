@@ -291,7 +291,6 @@ export default {
 ```
 除了以上注解，作者表示还有更多的注解正在开发中，如 `@Provide`, `@Inject` 等，但如果现在就想要使用这些功能呢，该插件提供了一个将 Vue 原配置转化为可以在 class 中使用的注解：`@NativeApi`，示例如下：
 ```javascript
-export default
 @VueComponent
 class HelloWorld{
 
@@ -299,9 +298,11 @@ class HelloWorld{
     components = {};
 
     @NativeApi
-    provide = {
-        message: 'message'
-    };
+    provide(){
+        return {
+            message: 'message'
+        };
+    }
 
     @NativeApi
     inject = ['parentProvide'];
@@ -324,7 +325,7 @@ class HelloWorld{
     created(){
         // 生命周期函数
     }
-    
+
     // ...等等
 }
 ```
@@ -333,8 +334,10 @@ class HelloWorld{
 export default{
     name: 'HelloWorld',
     components : {},
-    provide: {
-        message: 'message'
+    provide(){
+        return {
+            message: 'message'
+        };
     },
     inject: ['parentProvide'],
     data(){
