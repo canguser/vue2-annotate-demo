@@ -1,4 +1,9 @@
-### 通过 Annotate JS 生成自定义注解(面向切面编程)
+# 在 Vue2 Annotate 中通过 Annotate JS 生成自定义注解（面向切面编程）
+
+> 本文基于在了解 `Vue2 Annotate` 框架基本用法后的进阶使用技巧
+> `Vue2 Annotate` 简介地址：[https://palerock.cn/articles/001JPDEjZ87](https://palerock.cn/articles/001JPDEjZ87)
+> `Vue2 Annotate` 文档地址：[https://palerock.cn/projects/006XvyfPS9e](https://palerock.cn/projects/006XvyfPS9e)
+
 为了快速生成自定义注解，我们需要用到 [Annotate JS 框架](https://palerock.cn/projects/006T5t9zyHi) 提供的几个注解:
 - `@Surround` 用于自定义面向切面的动作
 - `@Annoate` 用于继承其它注解并且自定义参数
@@ -9,8 +14,8 @@
 > 由于本框架完全依赖于 `Annotate JS 框架`，为了方便开发，以上注解在 `^1.0.16` 版本以后可以直接由该框架引入：  
 `import {Annotate, Surround, DefaultParam, DynamicParam} from "@palerock/vue2-annotate";`
 
-了解了以上注解的基本用法后，我们以几个简单的例子来实现自定义注解
-#### TimeLogger
+了解了以上注解的基本用法后，我们用以下例子来实现自定义注解
+#### @TimeLogger 的实现
 在日常开发中，如果涉及到性能优化，我们总是需要通过在方法前后添加 `console.time/console.timeEnd` 类似代码以实现分析其运行时间长短，而这样的代码一是看起来相当不美观，二是会使代码结构看起来十分混乱。那我们可不可以使用一个注解来完成以上工序而完全不需要修改方法内的内容呢？完全可以。  
 首先，我们定义一个 class 命名为 `TimeLogger`，并且为其加上注解 `@Annotate({extends: Surround})`，如下所示：
 ```javascript
