@@ -15,7 +15,7 @@
         messages = ['hello', 'world'];
 
         @TimeLogger
-        @If({met: e => e.altKey, otherwise: e => console.log(e.altKey)})
+        @If({met: e => e.altKey, otherwise: () => console.log('Press `alt` to retry.')})
         testing() {
             console.log('do testing');
         }
