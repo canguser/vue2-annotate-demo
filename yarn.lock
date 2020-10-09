@@ -923,18 +923,18 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@palerock/annotate-js@^1.2.38":
-  version "1.2.38"
-  resolved "https://registry.yarnpkg.com/@palerock/annotate-js/-/annotate-js-1.2.38.tgz#d263c0db939788648b7266ed8a80f805df92a430"
-  integrity sha512-hNp1Hy+9vAd4XEBIxZ3FMlEMLjqBJZG56l0sxkPLpXZwH/L/q1LZm/yyWD2UNAhUcktGsNTAFpYeBvRimQmYVw==
+"@palerock/annotate-js@^1.2.41":
+  version "1.2.41"
+  resolved "https://registry.yarnpkg.com/@palerock/annotate-js/-/annotate-js-1.2.41.tgz#a8799dc4c89e9b0431bc48e3d27ee52c8847894b"
+  integrity sha512-HN7kqs3xsiQCTSAf2DaCAeDROFpGLDdFZXwoeeRacc2h17mVugwHC1/KQ5ZeKELQz+xAVh+GBSScMYRCMejNSQ==
 
-"@palerock/vue2-annotate@^1.0.18":
-  version "1.0.18"
-  resolved "https://registry.yarnpkg.com/@palerock/vue2-annotate/-/vue2-annotate-1.0.18.tgz#a14a809b4179944b57bafddbba79ff17a89881a5"
-  integrity sha512-AVokXFIcM5phZlh9vR2erzsmjdSdSLMe/VE0Ehl3/TZODLo+DI076t2aI+y3/RB6rKscasku6cJ6S3qKGgcFCA==
+"@palerock/vue2-annotate@^1.0.20":
+  version "1.0.20"
+  resolved "https://registry.yarnpkg.com/@palerock/vue2-annotate/-/vue2-annotate-1.0.20.tgz#4505e48045c110d2a1c475981e7ff71ad82bd9aa"
+  integrity sha512-kj86zWWINskSVizZYxbu5LYgJkgXWoKQQFzlRERPjSC3fVNRBRqA2xX9jbJZwfKsqNsze6/nO9R2l6rGMHYNbw==
   dependencies:
     "@babel/polyfill" "^7.11.5"
-    "@palerock/annotate-js" "^1.2.38"
+    "@palerock/annotate-js" "^1.2.41"
 
 "@soda/friendly-errors-webpack-plugin@^1.7.1":
   version "1.7.1"

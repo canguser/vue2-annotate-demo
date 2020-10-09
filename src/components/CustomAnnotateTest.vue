@@ -7,6 +7,7 @@
 <script>
     import {VueComponent, NativeApi} from "@palerock/vue2-annotate";
     import TimeLogger from "@/annotates/TimeLogger";
+    import If from "@/annotates/If";
 
     export default @VueComponent
     class CustomAnnotateTest {
@@ -14,6 +15,7 @@
         messages = ['hello', 'world'];
 
         @TimeLogger
+        @If({met: e => e.altKey, otherwise: e => console.log(e.altKey)})
         testing() {
             console.log('do testing');
         }
